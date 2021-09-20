@@ -1,0 +1,26 @@
+<div class="container" th:fragment="gameTable">
+    <link href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+    <table
+            data-card-view="true"
+            data-height="460"
+            data-toggle="table"
+            id="table">
+        <thead>
+        <tr>
+            <th data-field="id">ID</th>
+            <th data-field="playerOne">Player One</th>
+            <th data-field="moves">Moves</th>
+        </tr>
+        <tbody>
+        <tr th:each="game: ${games}">
+            <td th:text="${game.getId()}"></td>
+            <td th:text="${game.getPlayerOne()}"></td>
+            <td th:text="${game.getMoves()}"></td>
+            <button class="btn btn-primary" type="submit">Create</button>
+        </tr>
+        </tbody>
+        </thead>
+    </table>
+</div>

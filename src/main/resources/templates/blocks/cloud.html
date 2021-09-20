@@ -1,0 +1,10 @@
+<div class="container" th:fragment="cloud">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Tag cloud</h1>
+            <th:block th:each="move: ${moves}">
+                <a class="badge bg-secondary mt-2" href="#" th:utext="${move}"><h5></h5></a>
+            </th:block>
+        </div>
+    </div>
+</div>
